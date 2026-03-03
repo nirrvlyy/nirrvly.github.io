@@ -1,10 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Nirrvly</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV | Mahasiswa Ilmu Komputer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#1e3c72,#2a5298,#6a82fb);
+    color:#333;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    padding:15px 0;
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-weight:600;
+    font-size:18px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#ffd369;
+}
+
+/* ===== HERO ===== */
+.hero{
+    padding:140px 0 90px 0;
+    color:white;
+}
+
+.hero-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h1{
+    font-size:32px;
+}
+
+.hero-text span{
+    color:#ffd369;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.8;
+    margin-top:15px;
+    max-width:650px;
+}
+
+.hero-img img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== MAIN CARD AREA ===== */
+.main{
+    background:white;
+    margin-top:40px;
+    border-radius:12px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== GRID ===== */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+}
+
+/* ===== SECTION ===== */
+.section{
+    margin-bottom:35px;
+}
+
+.section h2{
+    font-size:18px;
+    margin-bottom:8px;   /* sebelumnya 15px */
+    color:#2a5298;
+    border-left:4px solid #6a82fb;
+    padding-left:10px;
+}
+
+/* ===== BADGE ===== */
+.badge{
+    display:inline-block;
+    background:#e3e9ff;
+    color:#2a5298;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin:5px 5px 0 0;
+}
+
+/* ===== SKILL BAR ===== */
+.skill{
+    margin-bottom:12px;
+}
+
+.bar{
+    background:#eee;
+    height:6px;
+    border-radius:10px;
+    margin-top:4px;
+}
+
+.progress{
+    height:6px;
+    width:0;
+    background:linear-gradient(to right,#6a82fb,#fc5c7d);
+    border-radius:10px;
+    transition:1.5s;
+}
+
+/* ===== CARD LIST ===== */
+.card{
+    margin-bottom:15px;
+}
+
+.card strong{
+    color:#1e3c72;
+}
+
+ul{
+    padding-left:18px;
+    font-size:14px;
+    margin-top:5px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:20px;
+    color:white;
+    margin-top:30px;
+}
+
+/* ===== ANIMATION ===== */
+.hidden{
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.8s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+    .hero-content{
+        text-align:center;
+    }
+    .hero-img{
+        margin-top:20px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Hello World 🚀</h1>
-    <p>Ini website pertama saya</p>
+
+<header>
+<div class="container nav">
+    <div class="logo">Niarti</div>
+    <nav>
+        <a href="#profile">Profil</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container hero-content">
+    <div class="hero-text">
+        <h1>Halo, Saya <span>Mahasiswa Ilmu Komputer</span></h1>
+        <p>
+            Mahasiswa Ilmu Komputer yang memiliki minat dalam pengembangan web,
+            teknologi informasi, dan analisis data dasar. Memiliki kemampuan
+            dasar pemrograman serta terus mengembangkan keterampilan melalui
+            proyek akademik dan pembelajaran mandiri.
+        </p>
+    </div>
+    <div class="hero-img">
+        <img src="niniii.jpeg">
+    </div>
+</div>
+</section>
+
+<div class="container main hidden">
+
+<div class="grid">
+
+<!-- LEFT SIDE -->
+<div>
+
+<div class="section" id="profile">
+<h2>Profil Singkat</h2>
+<p style="font-size:14px;">
+Disiplin, bertanggung jawab, dan memiliki kemampuan problem solving.
+Mampu bekerja dalam tim maupun individu serta terbiasa mengerjakan
+proyek berbasis teknologi.
+</p>
+</div>
+
+<div class="section" id="skills">
+<h2>Keahlian</h2>
+
+<div class="skill">
+HTML
+<div class="bar"><div class="progress" data-width="85%"></div></div>
+</div>
+
+<div class="skill">
+CSS
+<div class="bar"><div class="progress" data-width="80%"></div></div>
+</div>
+
+<div class="skill">
+Desain UI/UX
+<div class="bar"><div class="progress" data-width="70%"></div></div>
+</div>
+
+<div class="skill">
+MySQL
+<div class="bar"><div class="progress" data-width="65%"></div></div>
+</div>
+
+</div>
+
+<div class="section">
+<h2>Skills Tool</h2>
+<span class="badge">VS Code</span>
+<span class="badge">Git & GitHub</span>
+<span class="badge">Figma</span>
+<span class="badge">MySQL Workbench</span>
+<span class="badge">Google Colab</span>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div>
+
+<div class="section" id="education">
+<h2>Riwayat Pendidikan</h2>
+
+<div class="card">
+<strong>S1 Ilmu Komputer</strong><br>
+Universitas Halu Oleo (2024 - Sekarang)
+</div>
+
+<div class="card">
+<strong>SMA / SMK</strong><br>
+SMAN 5 Kendari (2021 - 2024)
+</div>
+
+<div class="card">
+<strong>SMP</strong><br>
+MTS Asy-Syafi'iyah (2019 - 2021)
+</div>
+
+<div class="card">
+<strong>SD</strong><br>
+MI Asy-Syafi'iyah (2012 - 2019)
+</div>
+
+</div>
+
+<div class="section">
+<h2>Pengalaman Akademik</h2>
+
+<div class="card">
+<strong>Proyek Website Perkuliahan</strong>
+<ul>
+<li>Membuat website statis menggunakan HTML, CSS, dan JavaScript</li>
+<li>Menerapkan desain responsif</li>
+<li>Menggunakan database sederhana</li>
+</ul>
+</div>
+
+<div class="card">
+<strong>Proyek Basis Data</strong>
+<ul>
+<li>Merancang ERD dan relasi tabel</li>
+<li>Mengimplementasikan query SQL</li>
+</ul>
+</div>
+
+</div>
+
+<div class="section" id="contact">
+<h2>Kontak</h2>
+<p style="font-size:14px;">
+Contact: 082347514624<br>
+Email: exxniar@email.com<br>
+GitHub: github.com/nirrvly<br>
+</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 Niarti | Mahasiswa Ilmu Komputer
+</footer>
+
+<script>
+const hiddenElements=document.querySelectorAll('.hidden');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+const bars=entry.target.querySelectorAll('.progress');
+bars.forEach(bar=>{
+bar.style.width=bar.getAttribute('data-width');
+});
+}
+});
+});
+hiddenElements.forEach(el=>observer.observe(el));
+</script>
+
 </body>
 </html>
